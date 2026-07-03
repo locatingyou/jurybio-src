@@ -1,0 +1,1 @@
+ALTER TABLE "configs" ADD COLUMN "background_mute" boolean DEFAULT false NOT NULL;

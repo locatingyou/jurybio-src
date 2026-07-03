@@ -1,0 +1,1 @@
+ALTER TABLE "configs" ADD COLUMN "entry_enabled" boolean DEFAULT true NOT NULL;

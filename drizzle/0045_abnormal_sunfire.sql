@@ -1,0 +1,1 @@
+ALTER TABLE "configs" ADD COLUMN "badge_monochrome" boolean DEFAULT false NOT NULL;

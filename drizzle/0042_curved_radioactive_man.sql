@@ -1,0 +1,1 @@
+ALTER TABLE "badges" ADD COLUMN "enabled" boolean DEFAULT true NOT NULL;

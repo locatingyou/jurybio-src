@@ -1,0 +1,1 @@
+ALTER TABLE "configs" ALTER COLUMN "badge_size" SET DEFAULT 20;

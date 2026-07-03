@@ -1,0 +1,1 @@
+CREATE TYPE "public"."file_type" AS ENUM('video', 'image');

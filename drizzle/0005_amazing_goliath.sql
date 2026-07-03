@@ -1,0 +1,1 @@
+ALTER TABLE "configs" ADD COLUMN "entry_background_color" text DEFAULT 'rgba(0, 0, 0, 0.5' NOT NULL;

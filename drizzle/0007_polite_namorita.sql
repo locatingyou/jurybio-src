@@ -1,0 +1,1 @@
+ALTER TABLE "configs" ADD COLUMN "banner_url" text;

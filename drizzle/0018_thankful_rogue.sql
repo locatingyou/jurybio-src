@@ -1,0 +1,1 @@
+ALTER TABLE "analytics_views" RENAME COLUMN "userAgent" TO "device";

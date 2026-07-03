@@ -1,0 +1,1 @@
+ALTER TABLE "configs" RENAME COLUMN "condary_border_color" TO "scondary_border_color";

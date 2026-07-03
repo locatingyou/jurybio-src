@@ -1,0 +1,1 @@
+ALTER TABLE "aliases" ALTER COLUMN "alias" DROP NOT NULL;

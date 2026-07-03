@@ -1,0 +1,1 @@
+ALTER TABLE "backgrounds" ALTER COLUMN "background_url" SET NOT NULL;

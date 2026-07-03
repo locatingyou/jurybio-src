@@ -1,0 +1,1 @@
+ALTER TABLE "configs" ADD COLUMN "secondary_text_color" text DEFAULT '#ffffff' NOT NULL;

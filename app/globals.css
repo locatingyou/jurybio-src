@@ -1,0 +1,249 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@layer base {
+    .font-chillax {
+        font-family: var(--font-chillax);
+    }
+    .font-sora {
+        font-family: var(--font-sora);
+    }
+    .font-array {
+        font-family: var(--font-array);
+    }
+    .font-minecraft {
+        font-family: var(--font-minecraft);
+    }
+    .font-iceberg {
+        font-family: var(--font-iceberg);
+    }
+    .font-dancing-script {
+        font-family: var(--font-dancing-script);
+    }
+    .font-jetbrains-mono {
+        font-family: var(--font-jetbrains-mono);
+    }
+    .font-comic-sans {
+        font-family: var(--font-comic-sans);
+    }
+    .font-jersey {
+        font-family: var(--font-jersey);
+    }
+    .font-lora {
+        font-family: var(--font-lora);
+    }
+    .font-cinzel {
+        font-family: var(--font-cinzel);
+    }
+    .font-facon {
+        font-family: var(--font-facon);
+    }
+    .font-werebeast {
+        font-family: var(--font-werebeast);
+    }
+}
+
+* {
+    scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+    width: 17px;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none !important;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-sans);
+    --font-mono: var(--font-geist-mono);
+    --font-heading: var(--font-sans);
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar: var(--sidebar);
+    --color-chart-5: var(--chart-5);
+    --color-chart-4: var(--chart-4);
+    --color-chart-3: var(--chart-3);
+    --color-chart-2: var(--chart-2);
+    --color-chart-1: var(--chart-1);
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent: var(--accent);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-muted: var(--muted);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary: var(--secondary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary: var(--primary);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-popover: var(--popover);
+    --color-card-foreground: var(--card-foreground);
+    --color-card: var(--card);
+    --animate-marquee: marquee var(--duration) infinite linear;
+    --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+    @keyframes marquee {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(calc(-100% - var(--gap)));
+        }
+    }
+    @keyframes marquee-vertical {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(calc(-100% - var(--gap)));
+        }
+    }
+}
+
+:root {
+    --background: oklch(0.145 0 0);
+    --foreground: oklch(0.985 0 0);
+    --card: oklch(0.205 0 0);
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.205 0 0);
+    --popover-foreground: oklch(0.985 0 0);
+    --primary: oklch(0.922 0 0);
+    --primary-foreground: oklch(0.205 0 0);
+    --secondary: oklch(0.269 0 0);
+    --secondary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.269 0 0);
+    --muted-foreground: oklch(0.708 0 0);
+    --accent: oklch(0.269 0 0);
+    --accent-foreground: oklch(0.985 0 0);
+    --destructive: oklch(0.704 0.191 22.216);
+    --border: oklch(1 0 0 / 10%);
+    --input: oklch(0 0 0 / 50%);
+    --ring: oklch(0.556 0 0);
+    --chart-1: oklch(0.87 0 0);
+    --chart-2: oklch(0.556 0 0);
+    --chart-3: oklch(0.439 0 0);
+    --chart-4: oklch(0.371 0 0);
+    --chart-5: oklch(0.269 0 0);
+    --sidebar: oklch(0.12 0 0);
+    --sidebar-foreground: oklch(0.985 0 0);
+    --sidebar-primary: oklch(0.488 0.243 264.376);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.269 0 0);
+    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --sidebar-border: oklch(1 0 0 / 10%);
+    --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+    * {
+        @apply border-border outline-ring/50;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+/* temp till i find a fix */
+.tiptap {
+    outline: none !important;
+    border: none !important;
+}
+
+.tiptap:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.tiptap h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0.67em 0;
+}
+
+.tiptap h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0.75em 0;
+}
+
+.tiptap h3 {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin: 0.83em 0;
+}
+
+.tiptap p {
+    margin: 0.5em 0;
+}
+
+.tiptap ul,
+.tiptap ol {
+    padding-left: 1.5em;
+    margin: 0.5em 0;
+}
+
+.tiptap blockquote {
+    border-left: 3px solid #ccc;
+    margin: 0.5em 0;
+    padding-left: 1em;
+}
+
+.tiptap code {
+    background-color: oklch(1 0 0 / 10%);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+.tiptap pre {
+    background-color: oklch(1 0 0 / 1%);
+    padding: 1em;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 0.5em 0;
+}
+
+.tiptap pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+.rainbow-effect {
+    animation: rainbow-color-change 6s ease-in-out infinite;
+}
+
+@keyframes rainbow-color-change {
+    0% {
+        color: #66f;
+    }
+    20% {
+        color: #09f;
+    }
+    40% {
+        color: lime;
+    }
+    60% {
+        color: #f39;
+    }
+    80% {
+        color: #f60;
+    }
+    100% {
+        color: #66f;
+    }
+}

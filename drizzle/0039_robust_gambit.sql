@@ -1,0 +1,1 @@
+ALTER TABLE "configs" ALTER COLUMN "font_family" SET DEFAULT 'Chillax';
